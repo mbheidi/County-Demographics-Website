@@ -1,55 +1,17 @@
-<!DOCTYPE html>
-<html>
-  <head> 
-    <title>
-     Author 
-    </title> 
-    
-  <link rel= "stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link href = "style.css" rel= "stylesheet">
-    
-    </head>
-  <body>
 
+  {% extends "layout.html" %}
 
-<nav class="navbar navbar-expand-md bg-dark navbar-dark">
-  <a class="navbar-brand" href="index.html">Homepage</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="collapsibleNavbar">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html"<Classics Data</a>
-      </li>
-     <li class="nav-item">
-      <a class="nav-link" href="title.html">Title</a>
-     </li>
-      <li class="nav-item">
-        <a class="nav-link" href="author.html">Author</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="subject.html">Subjects</a>
-      </li>    
-     <li class="nav-item">
-      <a class="nav-link" href="year.html">Publication Date</a>
-       </li>
-    </ul>
-  </div>  
-</nav>
-    
+{% set active_page = "page1" %}
 
-  
-  <body> 
-    
-    
-    
-      <h1>Author</h1>
+{% block title %}Author{% endblock %}
+
+{% block content %}
+
+<h1>Author</h1>
+
     
    <h3>Select an author</h3>  
    
      <button id="b1">submit</button> 
-    
-  </body>
+  {% endblock %} 
   
-</html>

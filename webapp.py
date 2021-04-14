@@ -23,6 +23,12 @@ def render_page3():
 def render_page4():
     return render_template('year.html')
 
+@app.route("/response")
+def render_response():
+    author = request.args['author'] 
+    return render_template('response.html', response = author)
+    
+
 if __name__ == '__main__':    
     app.run(debug=False)
         

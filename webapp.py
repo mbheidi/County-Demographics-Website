@@ -5,7 +5,9 @@ app = Flask(__name__)
 
 @app.route('/')
 def home():
-    return render_template('author.html')
+    with open('classics.json') as classics_data:
+        data = json.load(classics_data)
+    return render_template('author.html', data=data)
 
 @app.route("/p1")
 def render_page1():

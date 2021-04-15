@@ -7,7 +7,13 @@ app = Flask(__name__)
 def home():
     with open('classics.json') as classics_data:
         data = json.load(classics_data)
-    return render_template('author.html', data=data)
+    for d in data:
+        author=d['bibliography']['author']['name']
+        options += Markup("<option value=\"" + author + "\">" + author + "</option>")
+    return render_template('author.html', options=options)
+
+
+
 
 @app.route("/p1")
 def render_page1():

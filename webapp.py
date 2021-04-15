@@ -7,6 +7,7 @@ app = Flask(__name__)
 def home():
     with open('classics.json') as classics_data:
         data = json.load(classics_data)
+    options=""
     for d in data:
         author=d['bibliography']['author']['name']
         options += Markup("<option value=\"" + author + "\">" + author + "</option>")

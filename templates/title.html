@@ -9,9 +9,15 @@
   
     <h1> Classic Title</h1>
     
-   <h3>Select a Classic</h3>  
+  <h3>Select a Title</h3>  
+   
+     <form action='/title'>
+      <select name="title" id="title">
+        {{ options }}
+      </select>
+      <input type="submit">
+    </form>
     
-    <button id="b1">submit</button> 
   
 {% endblock %} 
 

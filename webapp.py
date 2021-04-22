@@ -37,19 +37,9 @@ def render_response():
     author = request.args['author'] 
     with open('classics.json') as classics_data:
         data = json.load(classics_data)
-    birth="" 
-    death=""
-    for d in data:
-        if d['bibliography']['author']['name']==author:
-            birth=d['bibliography']['author']['birth']
-            death=d['bibliography']['author']['death']
-        
-    return render_template('response.html', response = author, birth=birth, death=death)
-    
+    return render_template('response.html', response = author)
+    for myVariable in data:
 
 if __name__ == '__main__':    
     app.run(debug=False)
-        
-
-        
-        
+      

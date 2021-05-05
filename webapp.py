@@ -13,9 +13,6 @@ def home():
         options += Markup("<option value=\"" + author + "\">" + author + "</option>")
     return render_template('author.html', options=options)
 
-
-
-
 @app.route("/p1")
 def render_page1():
     return render_template('index.html')
